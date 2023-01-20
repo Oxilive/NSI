@@ -1,0 +1,12 @@
+.image
+{
+    width: 150px;
+    height: 150px;
+    border-color: black;
+    border-style: solid;
+    display: absolute;
+}
+body
+{
+    background-image:url(https://img.freepik.com/photos-gratuite/fond-coups-pinceau-bleu_125540-809.jpg?w=2000);
+}
