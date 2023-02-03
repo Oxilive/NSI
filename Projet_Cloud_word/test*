@@ -1,0 +1,13 @@
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
+text = "This is some sample text that will be used to generate a word cloud."
+
+# Generate the word cloud
+wordcloud = WordCloud(width=800, height=400).generate(text)
+
+# Plot the word cloud
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis("off")
+plt.show()
+

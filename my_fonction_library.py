@@ -1,5 +1,5 @@
 #Importations des libraries
-from random import randint
+from random import randint , choice
 from math import *
 #Fonction convertion binaire flottant hexadécimal
 def conv_entier_bin(entier):
@@ -307,6 +307,60 @@ def print_image(tableau):
         for x in range(largeur):
             print(tableau[y][x], end=" ")
         print()
+def boucle_nb_random():
+    liste = []
+    for loop in range(6):
+        nombre_random = randint(1,100)
+        liste.append(nombre_random)
+    return liste
+def boucle_nb_random2():
+    liste =[randint(1,100)for i in range(7)]
+    return liste
+def boucle_nb_random_li_de_li(nbliste, nb_in_liste):
+    li = []
+    for i in range(nbliste):
+        liste_random = [randint(1,100)for j in range(nb_in_liste)]
+        li.append(liste_random)
+    return li
+def acceder_nieme(L,n,p):
+    return L[p-1][n-1]
+def moyenne_liste(liste):
+    taille_li = len(liste)
+    moyenne = 0
+    indice = 0
+    while indice != taille_li:
+        moyenne = moyenne + liste[indice]
+        indice += 1
+    moyenne = moyenne // taille_li
+    return moyenne
+#Fonction avec des dictionnaires
+dico_scrabble = {"A" : 1, "B" : 3, "C" : 3, "D" : 2, "E" : 1, "F" : 4, "G" : 2,
+                 "H" : 4, "I" : 1, "J" : 8, "K" : 10, "L" : 1, "M" : 2, "N" : 1,
+                 "O" : 1, "P" : 3, "Q" : 8, "R" : 1, "S" : 1, "T" : 1, "U" : 1,
+                 "V" : 4, "W" : 10, "X" : 10, "Y" : 10, "Z" : 10}
+mot = str(input())
+def points(mot):
+    point = 0
+    for lettre in mot:
+        point = point + dico_scrabble[lettre]
+    return point
+reponse_alice = {"Q1":"b","Q2":"a","Q3":"d","Q5":"b"}
+def corriger_qcm(reponse_eleve):
+    note = 0
+    AWNSER = {"Q1":"c","Q2":"a","Q3":"d","Q4":"c","Q5":"b"}    
+    for reponse in reponse_eleve:
+        if reponse_eleve[reponse]== AWNSER[reponse]:
+            note += 3
+        if reponse_eleve[reponse]!= AWNSER[reponse]:
+            note -= 1
+    return note if note < 0 else 0
+dico_conv = {"GBP": 0.84828,
+             "USD": 1.1193,
+             "JPY": 121.75,
+             "CHF": 1.0865,
+             "RUB": 69.1898}
+def conv_monnaie(valeur,monnaie_depart,monnaie_arriver):
+    return round(valeur * dico_conv[monnaie_depart] / dico_conv[monnaie_arriver], 2)
 #Main Program
 # nombre = int(input("Enter positive number: "))
 # liste = create_list_random()
@@ -320,5 +374,10 @@ def print_image(tableau):
 # print(what_little_list(liste))
 # print(look_duplicates(liste))
 # print(del_duplicates(liste))
-game = create_jeu_carte()
-print(game)
+# game = create_jeu_carte()
+# print(game)
+# print(boucle_nb_random())
+# print(boucle_nb_random2())
+# print(points(mot))
+# print(corriger_qcm(reponse_alice))
+# print(conv_monnaie(15,"USD","CHF"))
