@@ -40,3 +40,5 @@
 # def conv_monnaie(valeur,monnaie_depart,monnaie_arriver):
 #     return round(valeur * dico_conv[monnaie_depart] / dico_conv[monnaie_arriver], 2)
 # print(conv_monnaie(15,"USD","CHF"))
+def compter_lettre(texte):
+    lettre = {'a' : 0 , 'b' : 0 , 'c' : 0 , 'd' : 0}
