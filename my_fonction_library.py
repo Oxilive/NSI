@@ -374,7 +374,7 @@ def conv_monnaie(valeur,monnaie_depart,monnaie_arriver):
 # print(what_little_list(liste))
 # print(look_duplicates(liste))
 # print(del_duplicates(liste))
-# game = create_jeu_carte()
+# game = create_jeu_carte() 
 # print(game)
 # print(boucle_nb_random())
 # print(boucle_nb_random2())

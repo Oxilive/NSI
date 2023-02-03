@@ -32,3 +32,4 @@ for nom_de_domaine in un_dico.values():
     print(nom_de_domaine)
 for extension, nom_de_domaine in un_dico.items():
     print(extension, nom_de_domaine)
+    
